@@ -2,15 +2,39 @@ import React from "react";
 
 const ColumnItem = (props) => {
 
-    console.log(props.column, "adsdadsad")
+
+    const listOfColumns = Object.entries(props.columns)
 
 
-    console.log(props)
+    const onChangeColumnValue = (columnName) => {
+
+        props.setState(({data}) => ({
+
+            data: data.map(item => {
+                if (item.table === props.tableName) {
+                    return {
+                        ...item,
+                        columnList: {
+                            ...item.columnList,
+                            [columnName]: !item.columnList[columnName]
+                        },
+
+                    }
+                }
+                return item;
+            })
+        }))
+    }
+
+    const columns = () => listOfColumns.map(column =>
+        <form><label> {column[0]} <input type="checkbox"
+                                         checked={column[1]} onChange={() => onChangeColumnValue(column[0])}/></label>
+        </form>)
 
 
     return (
-        <>
-            <li>{props.column}</li>
+        <>  
+            <li>{columns()}</li>
         </>
     )
 
