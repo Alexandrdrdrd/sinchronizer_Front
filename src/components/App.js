@@ -2,8 +2,9 @@ import './App.css';
 
 import axios from "axios";
 import React from "react";
-import TableList from "./TableList";
-import SubmitComponent from "./SubmitComponent";
+import TableList from "./tabele-list/TableList";
+import SubmitComponent from "./submit-component/SubmitComponent";
+import AppInfo from "./app-info/AppInfo";
 
 
 export default class App extends React.Component {
@@ -30,12 +31,14 @@ export default class App extends React.Component {
     submitButton = () => {
         return (axios.post('http://localhost:8080/api/post_data',
             this.state.data
-        ).then(console.log(this.state.data))
+        )
             .then(function (response) {
                 console.log(response);
+                alert("success")
             })
             .catch(function (error) {
                 console.log(error);
+                alert(error)
             }))
     }
 
@@ -43,6 +46,7 @@ export default class App extends React.Component {
     render() {
         return (
             <div className="App">
+                <AppInfo tableCounter={this.state.data.length} />
                 <TableList data={this.state.data} setState={this.setState}/>
                 <SubmitComponent submit={this.submitButton}/>
             </div>

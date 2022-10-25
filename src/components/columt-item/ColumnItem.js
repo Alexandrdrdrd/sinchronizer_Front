@@ -1,5 +1,7 @@
 import React from "react";
 
+import './column-item.css';
+
 const ColumnItem = (props) => {
 
 
@@ -33,7 +35,7 @@ const ColumnItem = (props) => {
 
 
     return (
-        <>  
+        <>
             <li>{columns()}</li>
         </>
     )

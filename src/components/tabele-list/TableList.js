@@ -1,6 +1,8 @@
 import React from 'react';
-import TableItem from "./TableItem";
+import TableItem from "../table-item/TableItem";
 
+
+import './table-list.css'
 
 const TableList = (props) => {
 

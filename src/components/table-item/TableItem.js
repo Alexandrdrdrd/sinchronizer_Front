@@ -1,6 +1,7 @@
 import React from 'react';
-import ColumnItem from "./ColumnItem";
+import ColumnItem from "../columt-item/ColumnItem";
 
+import './table-item.css'
 
 const TableItem = (props) => {
 
