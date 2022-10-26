@@ -34,7 +34,7 @@ export default class App extends React.Component {
         )
             .then(function (response) {
                 console.log(response);
-                alert("success")
+                alert("Данные отправлены успешно")
             })
             .catch(function (error) {
                 console.log(error);

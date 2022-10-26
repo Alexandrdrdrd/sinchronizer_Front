@@ -1,18 +1,14 @@
-.app-add-form {
-    margin-top: 30px;
-    padding: 35px;
+.button {
     background-color: #3d5a80;
-    border-radius: 1px;
-    box-shadow: 15px 15px 30px rgba(0,0,0, .15);
-    color: #fff;
-}
-
-.add-form {
+    border: none;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
     margin-top: 20px;
-}
-
-.add-form input {
-    margin-inside: 30px;
-    width: 350px;
-    margin-right: 20px;
+    box-shadow: 15px 15px 15px rgba(0,1000,0, .15);
 }

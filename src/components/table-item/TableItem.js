@@ -7,9 +7,9 @@ const TableItem = (props) => {
 
 
     return (
-        <li>
+        <li className="app-list list-group">
             {props.table.table}
-            <ul><ColumnItem columns={props.table.columnList} setState={props.setState} tableName={props.table.table}/>
+            <ul className="app-list list-group"><ColumnItem columns={props.table.columnList} setState={props.setState} tableName={props.table.table}/>
             </ul>
         </li>
     )

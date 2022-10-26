@@ -6,7 +6,7 @@ const SubmitComponent = (props) => {
 
     return (
         <button
-            className="btn btn-outline-danger"
+            className="button"
             type={"submit"} onClick={() => props.submit()} >
             Submit
         </button>

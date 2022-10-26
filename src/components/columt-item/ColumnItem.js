@@ -29,8 +29,13 @@ const ColumnItem = (props) => {
     }
 
     const columns = () => listOfColumns.map(column =>
-        <form><label> {column[0]} <input type="checkbox"
-                                         checked={column[1]} onChange={() => onChangeColumnValue(column[0])}/></label>
+        <form>
+            <label className="checkbox style-c"> {column[0]} <input type="checkbox"
+                                                                    checked={column[1]}
+                                                                    onChange={() => onChangeColumnValue(column[0])}/>
+                <div className="checkbox__checkmark"></div>
+
+            </label>
         </form>)
 
 
