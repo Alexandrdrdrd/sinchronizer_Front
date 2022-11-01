@@ -13,12 +13,13 @@ export default class App extends React.Component {
         super(props);
         this.setState = this.setState.bind(this);
         this.state = {
-            data: []
+            data: [],
+            columnsSelected: 0
+
         }
     }
 
     componentDidMount() {
-
         axios.get(`http://localhost:8080/api/get_data`)
             .then(res => {
                 const tables = res.data;
@@ -43,11 +44,13 @@ export default class App extends React.Component {
     }
 
 
+
+
     render() {
         return (
             <div className="App">
-                <AppInfo tableCounter={this.state.data.length} />
-                <TableList data={this.state.data} setState={this.setState}/>
+                <AppInfo numberOfTables={this.state.data.length} columnsSelected={this.state.columnsSelected} />
+                <TableList data={this.state.data} setState={this.setState} columnsSelected={this.state.columnsSelected}  />
                 <SubmitComponent submit={this.submitButton}/>
             </div>
         );

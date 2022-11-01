@@ -9,7 +9,7 @@ const TableList = (props) => {
 
     const tables = () => props.data.map(table => {
         return (
-            <TableItem table={table} setState={props.setState}/>)
+            <TableItem table={table} setState={props.setState} columnsSelected={props.columnsSelected} />)
 
     })
 
